@@ -1,0 +1,38 @@
+\documentclass[letter,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+
+% \usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+
+\usepackage{microtype}
+\usepackage{lmodern}
+
+\usepackage{mathtools}
+
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{siunitx}
+
+\usepackage[parfill]{parskip}
+\usepackage{array}
+% \usepackage{multirow}
+
+\sisetup{
+  separate-uncertainty,
+  multi-part-units = brackets,
+  bracket-numbers,
+  sticky-per
+}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\graphicspath{ {./images/} }
+\newcommand{\dist}[1] {\(d_{\mathrm{#1}}\)}
+\newcommand{\mdist}[1] {d_{\mathrm{#1}}}
+
+\title{Experiment 9 --- Experiment title here}
+\author{Laurence Amadeus Tristan, Nero Su}
+\date{15 March 2019}
