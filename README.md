@@ -22,7 +22,7 @@ $ pdflatex report9.tex
 Run twice so the references show up --- otherwise it'll just show as (??).
 
 ## To-do
-[ ] make LaTeX document
-[ ] finish the report
-[ ] diagram and plots
-[ ] adding Mathematica notebook content in the report.
+- [ ] make LaTeX document
+- [ ] finish the report
+- [ ] diagram and plots
+- [ ] adding Mathematica notebook content in the report.
