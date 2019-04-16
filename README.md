@@ -1,5 +1,5 @@
 # AUPHY 120 --- Experiment 9
-Lab report for Experiment 9 --- Experiment Name Here.
+Lab report for Experiment 9 --- Finding the speed of light using microwave optics.
 A LaTeX installation is needed to compile this.
 
 ## Packages
