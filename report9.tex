@@ -41,13 +41,74 @@
 \maketitle
 
 \section{Introduction}
+The aim of this experiment is to find the speed of light in air using three different methods of getting the wavelength \tlambda of the microwave source (\SI{10.525}{\giga\hertz}). We then compare the three values of the speed of light in air from those methods in terms of the precision and accuracy of those values.
+
+We define the value of the speed of light in air \(v\) as:
+\[ v = \SI{3.0}{\metre\per\second} \ \text{(to 1 d.p.)}. \]
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{goniometer.pdf}
+  \caption{A goniometer with mounted microwave transmitter-receiver pair.}
+  \label{fig:i1}
+\end{figure}
+
+We use a microwave transmitter-receiver pair mounted on a goniometer (Figure \ref{fig:i1}). The goniometer allows us to change (and measure) the angle of the receiver relative to the transmitter, and both transmitter and receiver's polarization axes are adjustable. The transmitter emits a microwave polarized along the transmitter's axis, and similarly the receiver receives the microwave polarized to its axis.
 
 \section{Experiment}
 \subsection{Part I: Finding factors affecting intensity of microwaves}
+First, we try to figure out what factors affects the intensity of the microwave energy that the receiver detects. We found that the following factors affect the intensity of microwave:
+
+\begin{enumerate}
+  \item Distance between the transmitter and receiver. The further the distance, the lower the intensity of microwave received by the receiver. The opposite is true when the distance is decreased.
+  \item Relative angle of the polarization axes of the transmitter and receiver. As the receiver turns, the intensity decreases to zero as it approaches \SI{90}{\degree} and increases to its maximum as it approaches \SI{180}{\degree}.
+  \item Presence of water between transmitter and receiver. When we put a dry towel between the pair intensity remains the same. However when we placed a wet towel between the pair the microwave is absorbed by the water present in the towel, so the intensity decreases to zero.
+\end{enumerate}
 
 \subsection{Part II: Measuring the wavelength \tlambda of microwaves}
+For each experiment, we adjust the goniometer such that the angle reads \SI{180}{\degree} for the receiver.
 
 \subsubsection{Standing waves method}
+First, move the receiver and the transmitter on the goniometer such that the receiver is at the intensity maxima. Then, make note of the location of the receiver on the ruler. Afterwards, move the receiver towards the transmitter slowly while counting the number of intensity maxima (\(\Delta m\)). Stop moving the receiver at one of the intensity maxima and make note of the location of the receiver and the number of intensity maxima. 
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \toprule
+    {\(m\)} & {\(d_m\)/\(\pm 0.1\) \si{\cm}} \\ \midrule
+    0 & 93.4 \\
+    4 & 87.5 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Initial and final values of the location of the receiver.}
+  \label{table:e1}
+\end{table}
+
+The relationship between \tlambda and \(d\) is
+
+\begin{equation} \label{eq:e1}
+  d = \Delta m \left( \frac{\lambda}{2} \right)
+\end{equation}
+
+\begin{tabbing}
+  where \= \(\Delta m\) \= = number of intensity maxima, \\
+  \> \(d\) \> = difference in location of receiver, \\
+  \> \tlambda \> = wavelength of microwave.
+\end{tabbing}
+
+\begin{align*}
+  \Delta m &= 4 - 0 \\
+  &= 4 \\
+  d &= d_4 - d_0 \\
+  &= \SI{93.4(1)}{\cm} - \SI{87.5(1)}{\cm} \\
+  &= \SI{5.9(2)}{\cm} \\
+\end{align*}
+From \eqref{eq:e1},
+\begin{align*}
+  \begin{split}
+    \SI{5.9}{\cm} &= 
+  \end{split}
+\end{align*}
 
 \subsubsection{Double-slit inteference method}
 
