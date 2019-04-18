@@ -183,7 +183,7 @@ Get the values for \ttheta and convert \(\delta\theta\) to radians.
 \begin{align*}
   \theta &= \SI{180}{\degree} - \SI{159(2)}{\degree} \\
   &= \SI{21(2)}{\degree} \\
-  \delta \theta \ (\mathrm{radians}) &\approx 0.0349065850398866 \ (\text{16 d.p.})
+  \delta \theta \ (\mathrm{radians}) &\approx 0.0349065850398866 \ (\text{16 s.f.})
 \end{align*}
 
 Using \[\lambda = d \sin \theta,\] find the value for \tlambda using values obtained from the double-slit experiment.
@@ -191,7 +191,7 @@ Using \[\lambda = d \sin \theta,\] find the value for \tlambda using values obta
   \begin{split}
     \lambda &= d \sin \theta \\
     &= (\SI{8.0}{\cm}) \sin{\SI{21}{\degree}} \\
-    &= \SI{2.866944}{\cm} \ \text{(6 d.p.)}
+    &\approx \SI{2.866944}{\cm} \ \text{(6 d.p.)}
   \end{split}
   \begin{split}
     \delta \lambda &= |\lambda| \left( \frac{\delta d}{d} + \frac{\delta (\sin\theta)}{\sin \theta} \right) \\
@@ -226,7 +226,7 @@ Convert \tlambda to metre and find the value for \(v\) (using \eqref{eq:i1}).
   \label{fig:e2}
 \end{figure}
 
-Setup the apparatus as shown in Figure \ref{fig:e2}. The suggestion for the double-slit inteference experiment still holds. With the available plates, replace the double-slit arrangement with the single slit with the width of the slit \(D\) being around \SIrange{7}{8}{\cm}. Make sure the slit are aligned as symmetrical as possible, and the slit perimeters as close to vertical as possible. Afterwards, start rotating the arm slowly while increasing sensitivity (and if possible, its scale) of the receiver to find the first diffraction \emph{minima}. This will prove difficult, so we highly suggest double-checking the angle \ttheta by rotating it the other way.
+Setup the apparatus as shown in Figure \ref{fig:e2}. The suggestion for the double-slit inteference experiment still hold for this method. With the available plates, replace the double-slit arrangement with the single slit with the width of the slit \(D\) being around \SIrange{7}{8}{\cm}. Make sure the slit are aligned as symmetrical as possible, and the slit perimeters as close to vertical as possible. Afterwards, start rotating the arm slowly while increasing sensitivity (and if possible, its scale) of the receiver to find the first diffraction \emph{minima}. This will prove difficult, so we highly suggest double-checking the angle \ttheta by rotating it the other way.
 
 \begin{table}[!ht]
   \centering
@@ -247,9 +247,48 @@ The equation needed for \(\delta(\sin \theta)\) has been derived so we will use 
 Get the value for \ttheta and convert \(\delta \theta\) to radians using data from Table \ref{table:e3}.
 \begin{align*}
   \theta &= \SI{180}{\degree} - \SI{161(4)}{\degree} \\
-  &= \SI{19(4)}{\degree}
+  &= \SI{19(4)}{\degree} \\
+  \delta \theta \ \text{(radians)} &\approx 0.0698132 \ \text{(6 s.f.)}
 \end{align*}
+
+With \[\lambda = D \sin \theta, \] find the value for \tlambda using values from Table \ref{table:e3}.
+\begin{align*}
+  \begin{split}
+    \lambda &= D \sin \theta \\
+    &= (\SI{7.0}{\cm}) \sin{\SI{19}{\degree}} \\
+    &\approx \SI{2.278977}{\cm} \ \text{(6 d.p.)}
+  \end{split}
+  \begin{split}
+    \delta \lambda &= |\lambda| \left( \frac{\delta D}{D} + \frac{\delta (\sin\theta)}{\sin \theta} \right) \\
+    &= |(\SI{7.0}{\cm}) \sin{\SI{19}{\degree}}| \left( \frac{\SI{0.2}{\cm}}{\SI{7.0}{\cm}} + \frac{(\cos{\SI{21}{\degree}})(0.0698132)}{\sin{\SI{19}{\degree}}} \right) \\
+    &\approx \SI{0.242691}{\cm} \ \text{(to 6 d.p.)} \\
+    &\approx \SI{0.2}{\cm} \ \text{(1 s.f.)}
+  \end{split}
+\end{align*}
+\[\therefore \lambda = \SI{2.3(2)}{\cm}\]
+
+Convert \tlambda to metre and find the value for \(v\) (using \eqref{eq:i1}).
+\begin{align*}
+  \begin{split}
+  v &= f \lambda \\
+  &= (\SI{10.525(9)}{\hertz})(\SI{0.023(2)}{\m}) \\
+  &= \SI{2.3166e8}{\metre\per\second}
+  \end{split}
+  \begin{split}
+    \delta v &= |v|\left( \frac{\delta \lambda}{\lambda} \right) \\
+    &= |\SI{2.3166e8}{\metre\per\second}|\left( \frac{\SI{0.002}{\m}}{\SI{0.023}{\m}} \right) \\
+    &= \SI{2.106e7}{\m\per\s} \\
+    &\approx \SI{2e7}{\m\per\s}
+  \end{split}
+\end{align*}
+\[\therefore v = \SI{2.3(2)e8}{\m\per\s}\]
+
 \pagebreak
 \section{Conclusions}
+From this experiment, we were able to use the two properties of waves, interference and diffraction, to determine the wavelength of microwave. The three methods that we used gives a practical example of how waves behave and how it relates to the wavelength of the wave itself.
+
+Looking at the three values of the speed of light in air \(v\), the first method (standing waves method) gives the most precise value of \(v\) due to its low uncertainty, while the double-slit method was the least precise of all. However, when comparing with the ground truth value (\(v_a\)), we found that the although the double-slit method was the least precise, however it gives the most accurate value for \(v\). The standing wave method gave us an answer, while \SI{0.2}{\m\per\s} off, was the second-most accurate; whereas the single-slit diffraction method was the least accurate of all.
+
+We suspect that there might be systematic errors that we did not account for in the experiment, and as such both standing waves and single-slit diffraction methods did not correctly predict the speed of light. Not only that, we might have underestimated the uncertainties of our measurements due to the systematic and random errors that we did not take into account. To improve, one suggestion would be to stay away from the transmitter as our human body absorb microwaves due to its water content.  
 
 \end{document}
