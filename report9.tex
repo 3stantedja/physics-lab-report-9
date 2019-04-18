@@ -41,19 +41,25 @@
 \maketitle
 
 \section{Introduction}
-The aim of this experiment is to find the speed of light in air using three different methods of getting the wavelength \tlambda of the microwave source (\SI{10.525}{\giga\hertz}). We then compare the three values of the speed of light in air from those methods in terms of the precision and accuracy of those values.
+The aim of this experiment is to find the speed of light in air using three different methods of getting the wavelength \tlambda of the microwave source (\(f = \SI{10.525}{\giga\hertz}\)). We then compare the three values of the speed of light in air from those methods in terms of the precision and accuracy of those values.
 
 We define the value of the speed of light in air \(v\) as:
-\[ v = \SI{3.0}{\metre\per\second} \ \text{(to 1 d.p.)}. \]
+\[ v_a = \SI{3.0}{\metre\per\second} \ \text{(to 1 d.p.)}. \]
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\textwidth]{goniometer.pdf}
-  \caption{A goniometer with mounted microwave transmitter-receiver pair.}
+  \caption{A goniometer with the mounted microwave transmitter-receiver pair.}
   \label{fig:i1}
 \end{figure}
 
 We use a microwave transmitter-receiver pair mounted on a goniometer (Figure \ref{fig:i1}). The goniometer allows us to change (and measure) the angle of the receiver relative to the transmitter, and both transmitter and receiver's polarization axes are adjustable. The transmitter emits a microwave polarized along the transmitter's axis, and similarly the receiver receives the microwave polarized to its axis.
+
+Once \tlambda is established using the three experiments, we use the equation
+\begin{equation}
+  v = f \lambda
+\end{equation}
+to get a value for the speed of light in air (indicated by \(v\)) for each experiment.
 
 \section{Experiment}
 \subsection{Part I: Finding factors affecting intensity of microwaves}
@@ -69,7 +75,7 @@ First, we try to figure out what factors affects the intensity of the microwave 
 For each experiment, we adjust the goniometer such that the angle reads \SI{180}{\degree} for the receiver.
 
 \subsubsection{Standing waves method}
-First, move the receiver and the transmitter on the goniometer such that the receiver is at the intensity maxima. Then, make note of the location of the receiver on the ruler. Afterwards, move the receiver towards the transmitter slowly while counting the number of intensity maxima (\(\Delta m\)). Stop moving the receiver at one of the intensity maxima and make note of the location of the receiver and the number of intensity maxima. 
+First, move the receiver and the transmitter on the goniometer such that the receiver is at the intensity maxima. Then, make note of the location of the receiver on the ruler. Afterwards, move the receiver towards the transmitter slowly while counting the number of intensity maxima (\(\Delta m\)). Stop moving the receiver at one of the intensity maxima and make note of the location of the receiver and the number of intensity maxima.
 
 \begin{table}[!ht]
   \centering
@@ -96,19 +102,46 @@ The relationship between \tlambda and \(d\) is
   \> \tlambda \> = wavelength of microwave.
 \end{tabbing}
 
+Now, get the values for \(\Delta m\) and \(d\). The uncerntainty for \(d\) accumulates as we add/subtract so it'll not be shown as it is trivial enough to do.
+
 \begin{align*}
   \Delta m &= 4 - 0 \\
   &= 4 \\
   d &= d_4 - d_0 \\
   &= \SI{93.4(1)}{\cm} - \SI{87.5(1)}{\cm} \\
-  &= \SI{5.9(2)}{\cm} \\
+  &= \SI{5.9(2)}{\cm}
 \end{align*}
-From \eqref{eq:e1},
+Using \eqref{eq:e1}, get the value for the wavelength \tlambda.
 \begin{align*}
   \begin{split}
-    \SI{5.9}{\cm} &= 
+    \SI{5.9}{\cm} &= \frac{(4) \lambda}{2} \\
+    \lambda &= \frac{2(\SI{5.9}{\cm})}{4} \\
+    &= \SI{2.95}{\cm}
+  \end{split}
+  \begin{split}
+    \delta \lambda &= |\lambda|\left( \frac{\delta d}{d} \right) \\
+    &= \SI{2.95}{\cm} \left( \frac{\SI{0.2}{\cm}}{\SI{5.9}{\cm}} \right) \\
+    &= \SI{0.1}{\cm}
   \end{split}
 \end{align*}
+\[\therefore \lambda = \SI{3.0(1)}{\cm}\]
+
+Convert \tlambda to metre and find the value for the speed of light in air \(v\).
+
+\begin{align*}
+  \begin{split}
+    v &= f \lambda \\
+    &= (\SI{10.525e9}{\hertz})(\SI{3.0e-2}{\m}) \\
+    &= \SI{3.1575e8}{\m\per\s}
+  \end{split}
+  \begin{split}
+    \delta v &= |v| \left( \frac{\delta \lambda}{\lambda} \right) \\
+    &= |\SI{3.1575e8}{\m}| \left( \frac{\SI{1e-3}{\m}}{\SI{3.0e-2}{\m}} \right) \\
+    &= \SI{1.07034e7}{\m\per\s} \\
+    &\approx \SI{1e7}{\m\per\s} \ \text{(to 1 s.f.)}
+  \end{split}
+\end{align*}
+\[\therefore v = \SI{3.2(1)e8}{\m\per\s}\]
 
 \subsubsection{Double-slit inteference method}
 
