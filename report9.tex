@@ -21,6 +21,7 @@
 % \usepackage{multirow}
 
 \newcommand{\tlambda}{\(\lambda\) }
+\newcommand{\ttheta}{\(\theta\) }
 
 \sisetup{
   separate-uncertainty,
@@ -55,6 +56,8 @@ We define the value of the speed of light in air \(v\) as:
 
 We use a microwave transmitter-receiver pair mounted on a goniometer (Figure \ref{fig:i1}). The goniometer allows us to change (and measure) the angle of the receiver relative to the transmitter, and both transmitter and receiver's polarization axes are adjustable. The transmitter emits a microwave polarized along the transmitter's axis, and similarly the receiver receives the microwave polarized to its axis.
 
+The plate-holder is an attachment point for the construction of a double-slit plate or a single-slit plate. The plates were stuck together using magnets, which then will be attached to the plate-holder. \pagebreak[4]
+
 Once \tlambda is established using the three experiments, we use the equation
 \begin{equation}
   v = f \lambda
@@ -79,7 +82,7 @@ First, move the receiver and the transmitter on the goniometer such that the rec
 
 \begin{table}[!ht]
   \centering
-  \begin{tabular}{cc}
+  \begin{tabular}{cS}
     \toprule
     {\(m\)} & {\(d_m\)/\(\pm 0.1\) \si{\cm}} \\ \midrule
     0 & 93.4 \\
@@ -94,8 +97,8 @@ The relationship between \tlambda and \(d\) is
 
 \begin{equation} \label{eq:e1}
   d = \Delta m \left( \frac{\lambda}{2} \right)
-\end{equation}
-
+\end{equation} 
+\nopagebreak[4]
 \begin{tabbing}
   where \= \(\Delta m\) \= = number of intensity maxima, \\
   \> \(d\) \> = difference in location of receiver, \\
@@ -103,7 +106,6 @@ The relationship between \tlambda and \(d\) is
 \end{tabbing}
 
 Now, get the values for \(\Delta m\) and \(d\). The uncerntainty for \(d\) accumulates as we add/subtract so it'll not be shown as it is trivial enough to do.
-
 \begin{align*}
   \Delta m &= 4 - 0 \\
   &= 4 \\
@@ -127,7 +129,6 @@ Using \eqref{eq:e1}, get the value for the wavelength \tlambda.
 \[\therefore \lambda = \SI{3.0(1)}{\cm}\]
 
 Convert \tlambda to metre and find the value for the speed of light in air \(v\).
-
 \begin{align*}
   \begin{split}
     v &= f \lambda \\
@@ -144,6 +145,74 @@ Convert \tlambda to metre and find the value for the speed of light in air \(v\)
 \[\therefore v = \SI{3.2(1)e8}{\m\per\s}\]
 
 \subsubsection{Double-slit inteference method}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Double-slit.png}
+  \caption{Apparatus setup for the double-slit inteference experiment.}
+  \label{fig:e1}
+\end{figure}
+Setup the apparatus as shown in Figure \ref{fig:e1}. It is suggested to move the transmitter as close to the plate as possible, while adjusting the receiver such that it is located in one of the intensity maxima. Then, using the available plates construct a double-slit, with the width of the slit each being \SI{2}{\cm}, and a slit spacing (denoted as \(d\)) of about \SI{8}{\cm}, measured centre to centre. Make sure the slits are aligned as symmetrical as possible, and the individual slits as vertical as possible. Now, rotate the receiver arm slowly to find the first diffraction maximum. If necessary, move the arm the other way around to confirm the angle between the centre and the first diffraction maximum.
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{cS}
+    \toprule
+    {Variable} & {Value} \\ \midrule
+    \(\theta_0\) & \SI{180}{\degree} \\
+    \(\theta_1\) & \SI{159(2)}{\degree} \\
+    \(d\) & \SI{8.0(2)}{\cm} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Data gathered from the double-slit experiment.}
+  \label{table:e2}
+\end{table}
+
+Before continuing with the calculation, we need to get the expression for the uncertainty of \(\sin{} \theta\). First, let's define \(\sin \theta\) in terms of \(z\).
+\begin{align*}
+  z &= \sin \theta \\
+  \frac{d}{d\theta}(z) &= \cos \theta 
+\end{align*}
+
+Now, for a value of \(z\), the uncertainty of \(z\) (and hence \(\sin \theta \)) is
+\begin{align} \label{eq:e2}
+  \delta z &= \frac{d}{d \theta}(z) \  \delta \theta \notag \\
+  \delta (\sin \theta) &= \cos \theta \ \delta \theta.
+\end{align}
+
+Get the values for \ttheta and convert \(\delta\theta\) to radians.
+\begin{align*}
+  \theta &= \SI{180}{\degree} - \SI{159(2)}{\degree} \\
+  &= \SI{21(2)}{\degree} \\
+  \delta \theta \ (\mathrm{radians}) &\approx 0.0349065850398866 \ (\text{16 d.p.})
+\end{align*}
+
+Find the value for \tlambda using values obtained from the double-slit experiment.
+\begin{align*}
+  \begin{split}
+    \lambda &= d \sin \theta \\
+    &= (\SI{8.0}{\cm}) \sin{\SI{21}{\degree}} \\
+    &= \SI{2.866944}{\cm} \ \text{(6 d.p.)}
+  \end{split}
+  \begin{split}
+    \delta \lambda &= |\lambda| \left( \frac{\delta d}{d} + \frac{\delta (\sin\theta)}{\sin \theta} \right) \\
+    &= |(\SI{8.0}{\cm}) \sin{\SI{21}{\degree}}| \left( \frac{\SI{0.2}{\cm}}{\SI{8.0}{\cm}} + \frac{(\cos{\SI{21}{\degree}})(0.03490658\dots)}{\sin{\SI{21}{\degree}}} \right) \\
+    &\approx \SI{0.332378}{\cm} \ \text{(to 6 d.p.)} \\
+    &\approx \SI{0.3}{\cm} \ \text{(1 s.f.)}
+  \end{split}
+\end{align*}
+\[\therefore \lambda \approx \SI{2.9(3)}{\cm}\]
+
+Convert \tlambda to metre and find the value for \(v\).
+\begin{align*}
+  \begin{split}
+  v &= f \lambda \\
+  &= (\SI{10.525(9)}{\hertz})(\SI{0.029(3)}{\m}) \\
+  &= \SI{}
+  \end{split}
+  \begin{split}
+    
+  \end{split}
+\end{align*}
 
 \subsubsection{Single-slit inteference method}
 
