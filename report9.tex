@@ -59,7 +59,7 @@ We use a microwave transmitter-receiver pair mounted on a goniometer (Figure \re
 The plate-holder is an attachment point for the construction of a double-slit plate or a single-slit plate. The plates were stuck together using magnets, which then will be attached to the plate-holder. \pagebreak[4]
 
 Once \tlambda is established using the three experiments, we use the equation
-\begin{equation}
+\begin{equation} \label{eq:i1}
   v = f \lambda
 \end{equation}
 to get a value for the speed of light in air (indicated by \(v\)) for each experiment.
@@ -186,7 +186,7 @@ Get the values for \ttheta and convert \(\delta\theta\) to radians.
   \delta \theta \ (\mathrm{radians}) &\approx 0.0349065850398866 \ (\text{16 d.p.})
 \end{align*}
 
-Find the value for \tlambda using values obtained from the double-slit experiment.
+Using \[\lambda = d \sin \theta,\] find the value for \tlambda using values obtained from the double-slit experiment.
 \begin{align*}
   \begin{split}
     \lambda &= d \sin \theta \\
@@ -200,22 +200,56 @@ Find the value for \tlambda using values obtained from the double-slit experimen
     &\approx \SI{0.3}{\cm} \ \text{(1 s.f.)}
   \end{split}
 \end{align*}
-\[\therefore \lambda \approx \SI{2.9(3)}{\cm}\]
+\[\therefore \lambda = \SI{2.9(3)}{\cm}\]
 
-Convert \tlambda to metre and find the value for \(v\).
+Convert \tlambda to metre and find the value for \(v\) (using \eqref{eq:i1}).
 \begin{align*}
   \begin{split}
   v &= f \lambda \\
   &= (\SI{10.525(9)}{\hertz})(\SI{0.029(3)}{\m}) \\
-  &= \SI{}
+  &= \SI{3.05225e8}{\metre\per\second}
   \end{split}
   \begin{split}
-    
+    \delta v &= |v|\left( \frac{\delta \lambda}{\lambda} \right) \\
+    &= |\SI{3.05225e8}{\metre\per\second}|\left( \frac{\SI{0.003}{\m}}{\SI{0.029}{\m}} \right) \\
+    &= \SI{3.15755e7}{\m\per\s} \\
+    &\approx \SI{3e7}{\m\per\s}
   \end{split}
 \end{align*}
+\[\therefore v = \SI{3.1(3)e8}{\m\per\s}\]
 
 \subsubsection{Single-slit inteference method}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{Single-slit.png}
+  \caption{Apparatus setup for the single-slit inteference experiment.}
+  \label{fig:e2}
+\end{figure}
 
+Setup the apparatus as shown in Figure \ref{fig:e2}. The suggestion for the double-slit inteference experiment still holds. With the available plates, replace the double-slit arrangement with the single slit with the width of the slit \(D\) being around \SIrange{7}{8}{\cm}. Make sure the slit are aligned as symmetrical as possible, and the slit perimeters as close to vertical as possible. Afterwards, start rotating the arm slowly while increasing sensitivity (and if possible, its scale) of the receiver to find the first diffraction \emph{minima}. This will prove difficult, so we highly suggest double-checking the angle \ttheta by rotating it the other way.
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{cS}
+    \toprule
+    {Variable} & {Value} \\ \midrule
+    \(\theta_0\) & \SI{180}{\degree} \\
+    \(\theta_1\) & \SI{161(4)}{\degree} \\
+    \(D\) & \SI{7.0(2)}{\cm} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Data gathered from the single-slit experiment.}
+  \label{table:e3}
+\end{table}
+
+The equation needed for \(\delta(\sin \theta)\) has been derived so we will use the result from Equation \ref{eq:e2}
+
+Get the value for \ttheta and convert \(\delta \theta\) to radians using data from Table \ref{table:e3}.
+\begin{align*}
+  \theta &= \SI{180}{\degree} - \SI{161(4)}{\degree} \\
+  &= \SI{19(4)}{\degree}
+\end{align*}
+\pagebreak
 \section{Conclusions}
 
 \end{document}
