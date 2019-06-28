@@ -23,5 +23,5 @@ Run twice so the references show up --- otherwise it'll just show as (??).
 
 ## To-do
 - [x] make LaTeX document
-- [ ] finish the report
-- [ ] diagram and plots
+- [x] finish the report
+- [x] diagram and plots
